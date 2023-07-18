@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /* Estos son los colores base que se van a usar en el proyecto */
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px; /* Medidas para usar de variables de font size */
+        }
+
+        body {
+            margin: 0; /* para que se quite la separacion */
+        }
+
+        .cards-container {
+            display: grid ; /* Generamos las grid para que cada card quepa en la grid*/
+            grid-template-columns: repeat(auto-fill, 240px); /* Es lo mismo que poner 1fr 1fr, el auto fill es porque no sabemos cuantas columnas vamos a necesitar ni cuanto de ancho va a ocupar y el 1fr al contenido de c/u*/
+            gap: 26px; /* PROPIEDAD DE CSS GRID - AVERIGUAR QUE ES */
+            place-content: center; /* Nos alinea nuestro contenido GRID en el centro */
+        }
+
+        .product-card {
+            width: 240px; /* Tamaño de las cards */
+        }
+
+        .product-card img {
+            width: 240px; /* Tamaño de las cards */
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover; /* Tiene su tamaño independientemente del widht y heught que le pusimos */
+        }
+
+        .product-info {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure {
+            margin: 0;
+        }
+
+        .product-info figure img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .product-info div p:nth-child(1) { /* Con esto hacemos referencia al primer parrafo  */
+            font-weight: bold;
+            font-size: var(--md); 
+            margin-top: 0; /* Ya lo pusimos mas arriba */ 
+            margin-bottom: 4px; /* Para sacar el margin por defecto de los p  */
+        }
+
+        .product-info div p:nth-child(2) { 
+            font-size: var(--sm); 
+            margin-top: 0px; /* Le quitamos los margenes al parrafo  */
+            margin-bottom: 0px;
+            color: var(--very-light-pink);
+        }
+
+        @media (max-widht: 640px) {
+            .cards-container {
+            grid-template-columns: repeat(auto-fill, 140px); 
+        }
+        .product-card {
+            width: 140px; 
+        }
+        .product-card img {
+            width: 140px; 
+            height: 140px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <section class="main-container">
+        <div class="cards-container"> <!-- Contenedor de las cartas en general -->
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card"> <!-- Colocamos las cards-->
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <div class="product-info"> <!--Para colocar toda la info debajo de las cartas y hay que crear dos cajitas, una para el texto y otra para el logo -->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Bike</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /* Estos son los colores base que se van a usar en el proyecto */
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px; /* Medidas para usar de variables de font size */
+        }
+
+        body {
+            margin: 0; /* para que se quite la separacion */
+        }
+
+        .login {
+            width: 100%; /* Para poder centrar todos los componentes */
+            height: 100vh; /* 100VH representaría el 100% de la altura de la ventana gráfica o la altura completa de la pantalla. Y, por supuesto, VW significa “viewport width” (ancho de la ventana gráfica), que es el ancho de la pantalla visible. */
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container {
+             display: grid;
+             grid-template-rows: auto 1fr auto; /* la parte superior donde esta el titulo y subt, este en auto y tome el tamaño que desee. Los sigueinte que sea de una fraccion para las contraseñas y para el resto el espacio que sobre */
+             width: 300px; /* Para que se adecue a las pantallas pequeñas porque no es tan grande */
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            width: 150px; /* Porque era muy chica */
+            margin-bottom: 48px; /* Para hacer la separacion con las palabras */
+            justify-self: center; /* Para centrarlo */
+            display: none; /* Para que el logo no aparezca en desktop */
+        }
+
+        .tittle {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: start;
+            margin-bottom: 36px;
+        }
+
+
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .input {
+            background-color: var(--text-input-field);
+            border: none;
+            border: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px; /* Para que no quede tan pegada con la contraseña */
+            margin-bottom: 12px;
+        }
+
+        .input.name,.input-email,.input-password {
+            margin-bottom: 22px;
+        }
+
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none; /* Para sacar el estilo por defecto de los bordes */
+            color: var(--white);
+            width: 100%; /* Para que ocupe todo */
+            cursor: pointer; 
+            font-size: var(--md);
+            font-weight: bold; /* Para que la letra sea mas gorda */
+            height: 50px; 
+        }
+
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        @media(max-width: 640px) { /* Para que aparezca la foto de la misma manera en mobile y desktop. Ponemos maxwidht y no min pq  todos nuestros estilos para arriba van a funcionar para todas las medidas grandes,dsp de esta medida q agreguemos aca */
+            .form-container {
+                height: 100%;
+            }
+            .form {
+                height: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+
+            <h1 class="tittle">My account</h1>
+
+            <form action="/" class="form">
+            <div>
+            <label for="name" class="label">Name</label>
+            <input type="text" id="name" placeholder="Juan" class="input input-name"> <!-- El id y el label tienen que tener el mismo nombre -->
+
+            <label for="email" class="label">Email <address></address></label>
+            <input type="text" id="email" placeholder="platzi@example.com" class="input input-email"> <!-- El id y el label tienen que tener el mismo nombre -->
+
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" placeholder="*********" class="input input-password"> <!-- El id y el label tienen que tener el mismo nombre -->
+            </div>
+
+            <input type="submit" value="Create" class="primary-button login-button"> <!-- Le ponemos de nombre primary por el color que vamos a usar y tmb otra clase adicional por si necesitamos agregarle algo -->
+            </form>
+            
+            
+
+        </div>
+    </div>
+</body>
+</html>
